@@ -1,35 +1,48 @@
 \begin{frame}[t]
 \frametitle{Some traffic statistics \dots}
-    Are we improving the conditions?
-    \hspace{-0.1cm}
-    \begin{center}
-    \begin{columns}[t]
-      \begin{column}{0.5\textwidth}
-      \begin{figure}
-      \includegraphics[width = 0.9\textwidth]{fig_37_grenoble-traffic}
-      \end{figure}
-      \metroset{block=fill}
-      \uncover<2->{
-      \begin{alertblock}{Now $\rightarrow$}
-        \begin{itemize}
-          \item[\frownie] {\small Cities tend to get more urban.}
-          \item[\smiley] {\small Big sources of data.}
-          \item[\smiley] {\small New measurements available for this purpose (e.g. GPS).}
-        \end{itemize}
-      \end{alertblock}
-      }
-    \end{column}
-    \begin{column}{0.5\textwidth}
-    \uncover<3>{
-      \begin{exampleblock}{Inrix}
-      Lyon: In 2014 drivers waste 36.03 (40H \~ 2013) hours per year in traffic,
-      Worst Hour = Tuesday 08:00-09:00 \footnote[frame]{\href{http://inrix.com/press-releases/2661/}{INRIX Report 2014}}
-      \end{exampleblock}
-      \begin{alertblock}{Current condition!}
-      France has moved from 4th to 7th position in the list of most congested countries in Europe with 29 lost hours in congestion during congestions in 2014 -  6th in the last report in 2016\footnote[frame]{\href{http://inrix.com/press-releases/scorecard-report-france/}{INRIX Report 2015}}.
-      \end{alertblock}
-    }
-      \end{column}
-    \end{columns}
-    \end{center}
+    Are we improving the conditions?~\footnote[frame]{https://inrix.com/scorecard/}
+    \begin{exampleblock}{Inrix}
+      \begin{tikzpicture}
+		\node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width = 1.0\textwidth]{fig_92_inrix2019.png}};
+		\uncover<2->{\draw[blue,ultra thick] (3.4,0) rectangle (4,3.5);}
+		\uncover<3->{\draw[red,ultra thick] (4.6,0) rectangle (5.3,3.5);}		
+	  \end{tikzpicture}
+	  \uncover<4->{
+      \begin{tikzpicture}
+		\node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width = 1.0\textwidth]{fig_93_lyoninrix2019.png}};	
+		\draw[blue,ultra thick] (3.4,0.3) rectangle (4,0.7);				
+	  \end{tikzpicture}
+	  }	  
+    \end{exampleblock}
+%    \hspace{-0.1cm}
+%    \begin{center}
+%    \begin{columns}[t]
+%      \begin{column}{0.5\textwidth}
+%      \begin{figure}
+%      \includegraphics[width = 0.9\textwidth]{fig_37_grenoble-traffic}
+%      \end{figure}
+%      \metroset{block=fill}
+%      \uncover<2->{
+%      \begin{alertblock}{Now $\rightarrow$}
+%        \begin{itemize}
+%          \item[\frownie] {\small Cities tend to get more urban.}
+%          \item[\smiley] {\small Big sources of data.}
+%          \item[\smiley] {\small New measurements available for this purpose (e.g. GPS).}
+%        \end{itemize}
+%      \end{alertblock}
+%      }
+%    \end{column}
+%    \begin{column}{0.5\textwidth}
+%    \uncover<3>{
+%      \begin{exampleblock}{Inrix}
+%      Lyon: In 2014 drivers waste 36.03 (40H \~ 2013) hours per year in traffic,
+%      Worst Hour = Tuesday 08:00-09:00 \footnote[frame]{\href{http://inrix.com/press-releases/2661/}{INRIX Report 2014}}
+%      \end{exampleblock}
+%      \begin{alertblock}{Current condition!}
+%      France has moved from 4th to 7th position in the list of most congested countries in Europe with 29 lost hours in congestion during congestions in 2014 -  6th in the last report in 2016\footnote[frame]{\href{http://inrix.com/press-releases/scorecard-report-france/}{INRIX Report 2015}}.
+%      \end{alertblock}
+%    }
+%      \end{column}
+%    \end{columns}
+%    \end{center}
 \end{frame}
