@@ -1,0 +1,41 @@
+\begin{frame}[shrink=5]{Discussion}
+    \begin{itemize}
+    \item The binary traffic lights
+    
+    \begin{itemize}[label=\textendash]
+    \item can help (two incoming flows will never collide)
+    \item make future optmizations more difficult
+    \end{itemize}
+    
+    \item The averaged-based approximation
+    
+    \begin{itemize}[label=\textendash]
+    \item preserves the consistency
+    \item avoid combinatioral issues while adding the duty cycle inside the model
+    \end{itemize}
+    
+    \pause
+    \item Several representations are possible for the traffic lights:
+    %
+    \begin{itemize}[label=\textendash]
+    \item Uni--coordinated: $\alpha_i(t) = \alpha_j(t),\ \forall\ i,j,\ \forall\ t$
+    \item With delay: $\alpha_i(t) = \alpha_j(t-k\Delta{}T)$
+    \end{itemize}
+    
+    \end{itemize}
+    
+    \pause
+    
+    Control advices:
+    \begin{itemize}
+    \item Control of duty cycle
+    
+    \begin{itemize}[label=\textendash]
+    \item Control of \emph{green times} $\overline{\alpha}_i$
+    \item Control of both $\overline{\alpha}_i$ and $T_i$
+    \end{itemize}
+    
+    \item Control of split ratio
+    \item Mixed strategy
+    \end{itemize}
+\end{frame}

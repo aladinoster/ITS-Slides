@@ -1,0 +1,28 @@
+\begin{frame}{Comments}
+    \begin{exampleblock}{Observations}
+    \begin{itemize}
+    \item \textbf{Pros:}
+    \begin{itemize}
+    \item The relaxed formulation is provably \emph{equivalent} to the original problem
+    \item Convex problems are generally considered "easy" to solve
+    \end{itemize}
+    \item \textbf{Cons:}
+    \begin{itemize}
+    \item Although efficient, the solution does not scale well with the size of the network
+    \end{itemize}
+    \end{itemize}
+    \end{exampleblock}
+    \begin{block}{Remaining question}
+        How to design scale the control to large traffic networks?
+    \end{block}        
+    \uncover<2->{
+    \begin{exampleblock}{Scalability requirements}
+        \begin{itemize}
+            \item Decomposition in subproblems
+            \item Communication of efficient information
+            \item Iterative and distributed algorithm
+            \item Optimality of the distributed algorithm
+        \end{itemize}        
+    \end{exampleblock}
+    }
+\end{frame}

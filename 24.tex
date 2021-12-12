@@ -1,0 +1,38 @@
+\begin{frame}{Avg-CTM: Example}
+    \begin{center}
+    
+    \begin{tikzpicture}[>=stealth,scale=0.6]  
+    \draw[->] (0,0)--(2,0) node[midway, above, color=black]  {$1$};
+    \uncover<3->{
+    \draw[->,orange] (0,0)--(2,0) node[midway, above, color=orange]  {$1$};
+    }
+    \draw[->] (2,2)--(2,0) node[midway, left, color=black] {$2$};
+    \uncover<3->{
+    \draw[->,green] (2,2)--(2,0) node[midway, left, color=green] {$2$};
+    }
+    \draw[->] (2,0)--(4,0) node[midway, below, color=black] {$3$} node[near start, above, color=black] {\scriptsize $\beta_3$};
+    \uncover<2->{
+    \draw[->,blue] (2,0)--(4,0) node[midway, below, color=blue] {$3$} node[near start, above, color=blue] {\scriptsize $\beta_3$};}
+    \draw[->] (2,0)--(2,-2) node[midway, right, color=black] {$4$} node[near start, left, color=black] {\scriptsize $\beta_4$};
+    \draw[->] (4,0)--(6,0) node[midway, below, color=black] {$6$} node[near start, above, color=black] {\scriptsize $\beta_6$};
+    \draw[->] (4,0)--(4,2) node[midway, right, color=black] {$5$} node[near start, left, color=black] {\scriptsize $\beta_5$};
+    \draw[->] (4,-2)--(4,0) node[midway, right, color=black] {$7$} ;
+    \end{tikzpicture}
+    \end{center}
+    \[
+    \begin{aligned}
+    \onslide<1->{\dfrac{L_3}{T_s}(\overline{\rho_3^+}-\overline{\rho}_3)} &= \onslide<2->{{\color{blue}f_3^{in}} - \Malpha_3 f_3^{out} =} \onslide<3->{{\color{orange}{\Malpha_1}\beta_{13}} f_1^{out} + {\color{green}(1-\Malpha_1)\beta_{23}}f_2^{out} - \Malpha_3 f_3^{out} =} \\
+    &
+    \begin{aligned}
+     \onslide<4->{= \Malpha_1 \beta_{13} \min\bigg\{ D_1, \frac{S_3}{\beta_{13}}, \frac{S_4}{\beta_{14}}\bigg\}} \onslide<5->{&+ (1-\Malpha_1)\beta_3\min\bigg\{ D_2, \frac{S_3}{\beta_{23}}, \frac{S_4}{\beta_{24}}\bigg\}} \\
+     \onslide<6->{&- \Malpha_2 \min\bigg\{ D_3, \frac{S_5}{\beta_5}, \frac{S_6}{\beta_6} \bigg\}}
+     \end{aligned}
+    \end{aligned}
+    \]
+    \begin{block}{Consistency of the model}
+    \begin{itemize}
+    \item Total outflow never bigger than inflow
+    \item Inflow/outflow respect the Demand \& Supply paradigm
+    \end{itemize}
+    \end{block}
+    \end{frame}

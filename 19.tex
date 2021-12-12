@@ -1,0 +1,32 @@
+\begin{frame}
+    \frametitle{Model for urban traffic network}
+    \metroset{block=fill}
+    \begin{block}{Diverge network (Daganzo, 1994)}
+    \centering
+    \includegraphics<1-4>[scale=0.6]{fig_50_diverge2}
+    \end{block}
+    \begin{columns}
+    \column{0.4\paperwidth}
+    \uncover<2-4>{
+    \[
+    \begin{aligned}
+    f_1^{out} = & \max\,  \phi \\
+    \text{s.t. }\ & \phi \leq D_1 \\
+    & \beta_2 \phi \leq S_2 \\
+    & \beta_3 \phi \leq S_3
+    \end{aligned}
+    \]
+    }
+    \column{0.4\paperwidth}
+    \uncover<3-4>{
+    \[
+    f_1^{out} = \min \bigg\{ D_1, \frac{S_2}{\beta_2}, \frac{S_3}{\beta_3}\bigg\}
+    \]
+    }
+    \end{columns}
+    \uncover<4->{
+    \begin{block}{Split ratio}
+    Several different choices for the $\beta$s are possible, e.g. defining $\beta_{ij}$ which express the percentage of drivers in road $i$ that want to go in road $j$
+    \end{block}
+    }
+\end{frame}

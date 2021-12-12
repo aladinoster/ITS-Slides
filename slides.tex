@@ -1,0 +1,233 @@
+% !TEX TS-program = lualatex
+% !BIB TS-program = biber
+
+% \documentclass[10pt,handout]{beamer} 
+\documentclass[10pt]{beamer}   
+
+% ==============================================================================
+%   THEME
+% ============================================================================== 
+
+\usetheme[progressbar=frametitle]{metropolis}
+
+% ==============================================================================
+%	CONFIG SECTION
+% ============================================================================== 
+
+\input{config} 
+
+\usepackage[style=verbose,backend=biber,url=false,doi=false]{biblatex}
+\addbibresource{bibliography.bib}
+\addbibresource{references.bib}
+
+% Metadata
+\title[Control of Traffic Networks]{Control for transportation\\ vehicle \& urban traffic networks}
+\subtitle{Course: Intelligent Transportation Systems (ITS)\\ ITS for Smart Mobility}
+\date{Lyon, 4th December 2019}
+\author{\texorpdfstring{Andres Ladino\newline\url{http://bit.ly/ITS2019-Control}\newline\url{andres.ladino@ifsttar.fr}}{}}
+\institute{Institute Fran\c{c}ais des Sciences des Transports, de l'Am\'{e}nagement et des R\'{e}seaux (IFSTTAR)} \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.png}}
+
+
+\begin{document}
+
+\maketitle
+
+% use <handout:1|beamer:0> to include on handout/exclude on presentation
+
+\input{1} % Team and expertise
+
+\input{2} % Partners and opportunities 
+
+\input{3} % Motivation and traffic problem 
+
+\input{4} % Some traffic stats 
+
+\input{5} % Current trends 
+
+\input{6} % Big challenge 
+
+\input{7} % Big challenge - bullets 
+
+\input{8} % Outline 
+
+\input{9} % Basic intro control 
+
+\input{10} % Approach to control systems 
+
+\input{11} % Disclaimer (Shared systems)
+
+\section{Traffic light control}
+
+\input{12} % Intro + references on traffic light control 
+
+\input{13} % Light control in traffic networks
+
+\input{14} % Urban scenarios vs highway (complexity)
+
+\input{15} % Levels of complexity 
+
+\input{16} % Traffic light outline 
+
+\input{17} % Modeling start
+
+\input{18} % Demand supply paradigm
+
+\input{19} % Model for splitting + max flow principle
+
+\input{20} % Flow conservation 
+
+\input{21} % Example intersection 
+
+\input{22} % Model simplification 
+
+\input{23} % Computing the average
+
+\input{24} % Example average inflow
+
+\input{25} % Validation via macrosimulation
+
+\input{26} % Results macrosimulation
+
+\input{27} % Validation via microsimulation
+
+\input{28} % Results microsimulation 
+
+\input{29} % Comments and remarks
+
+\input{30} % Control in traffic history
+
+\input{31} % Control objectives 
+
+\input{32} % Traffic metrics - I
+
+\input{33} % Traffic metrics - II
+
+\input{34} % Control problem idea
+
+\input{35} % Control problem formulation
+
+\input{36} % Convexity characteristics
+
+\input{37} % Convexity characteristics ii
+
+\input{38} % Convexity characteristics iii
+
+\input{39} % Comments and remarks
+
+\input{40} % Distribution ideas
+
+\input{41} % Problem decomposition
+
+\input{42} % Distributed algorithm
+
+\input{43} % Numerical simulation setup
+
+\input{44} % Density indicators (open-closed loop) comparisson
+
+\input{45} % Performance indicators
+
+\input{46} % Microscopic scenario
+
+\input{47} % Scenario picture
+
+\input{48} % Scenario description
+
+\input{49} % Real traffic lights behavior
+
+\input{50} % Real traffic lights scenario
+
+\input{51} % Numerical results
+
+\input{52} % Final comments
+
+\section{Connected vehicles}
+
+\input{83} % Regular vehicles 
+
+\input{84} % Eqquiped vehicles 
+
+\input{85} % Connected vehicle
+
+\input{86} % Connected vehicle RSU\
+
+\input{87} % Smart vehicle
+
+\input{88} % CAV in traffic  
+
+\input{89} % SCOOP Test 
+
+\input{94} % Video SCOOP
+
+\input{90} % Results spacing 
+
+\input{91} % CO 2 savings 
+
+\input{92} % Conclusions 
+
+\section{Vehicle platooning}
+
+% \input{95} % Video Platooning
+
+\input{54} % Dynamic traffic assignment intro
+
+\input{55} % DTA problem solution
+
+\input{93} % Truck platoon control objective
+
+\input{56} % Objective of today
+
+\input{57} % Regular driver's model
+
+\input{58} % Research problem
+
+\input{59} % Platoon near merges
+
+\input{60} % Idea for coordinated merge
+
+\input{61} % Aspects in the maneuver execution
+
+\input{62} % Case Full CAV - I
+
+\input{63} % Case Full CAV - II
+
+\input{64} % Case Mixed Traffic I
+
+\input{65} % Case Mixed Traffic - II
+
+\input{66} % Merging summary (computation)
+
+\input{67} % Transient period 
+
+\input{68} % Anticipation time
+
+\input{69} % Anticipation time (Decision chart)
+
+\input{70} % Operational layer (model)
+
+\input{71} % Operational layer (control)
+
+\input{72} % Full control strategy
+
+\input{73} % Scenario description
+
+\input{74} % Operational control performance
+
+\input{75} % Robustness of the strategy
+
+\input{76} % String stability
+
+\input{77} % Full CAV scenario
+
+\input{78} % Mixed scenarios
+
+\input{79} % Table comparisons
+
+\input{80} % Conclusions 
+
+\input{81} % Questions
+
+\input{82} % Bibliography
+
+
+
+\end{document}

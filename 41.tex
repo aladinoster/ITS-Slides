@@ -1,0 +1,18 @@
+\begin{frame}{Scalability - Problem decomposition}
+    Problem set-up (e.g., problem $i$):
+    \[
+    \begin{aligned}
+    \min_{\bar{u}}\quad     & \sum_{i\in\roads} g_i \big(\bar{u}^{(i)}_{[p\in\mathcal{S}_i]} \big)\\
+    \text{s.t. }          & \bar{u}^{(i)}_{[p\in\mathcal{S}_i]}\in\mathcal{X}_i, \, \forall\, i\in\roads, \\
+                          & \bar{u}^{(i)}_i = \bar{u}^{(p)}_i,\quad \forall\, i\in\roads, \, \forall\, p\in\mathcal{S}_i\setminus i \\
+                          & \bar{u}^{(i)}_p = \bar{u}^{(p)}_p, \quad \forall\, i\in\roads,\, \forall p\in\mathcal{S}_i\setminus i.
+    \end{aligned}
+    \]
+    %
+    where $\bar{u}_p^{(i)}$ is the copy of the global variable $\bar{u}_p$ kept in memory locally by subproblem $i$.
+    
+    \metroset{block=fill}
+    \begin{block}{Why?}
+    Each subproblem needs to be self--contained: variables will be requested from others according to the communication graph
+    \end{block}
+\end{frame}

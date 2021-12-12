@@ -1,0 +1,27 @@
+\begin{frame}[shrink=8]{Traffic performance metrics}
+    \metroset{block=fill}
+    \begin{exampleblock}{Total travel distance:}
+        Full amount of distance travelled by all vehicles in the network    
+        \[
+        \text{TTD}(t) = \sum_{k=0}^{\floor{t/T_s}} \sum_{i\in\roads}f_i(kT_s)
+        \]
+    \end{exampleblock}
+    \begin{exampleblock}{Density balancing}
+        Notion on how uniformly vehicles spread in the network. Ideally \emph{uniform} vehicle distribution. 
+        
+        \[
+        \text{Bal}(t) = \sum_{k=0}^{\floor{t/T_s}} \sum_{i\in\roads}\sum_{j\in\neighDown_i}(\rho_i(kT_s)-\rho_j(kT_s))^2
+        = \sum_{k=0}^{\floor{t/T_s}} \rho'(kT_s)\laplacian\rho(kT_s)
+        \]
+        
+        where
+        \[
+        \begin{aligned}
+        \laplacian_{ii} = \lvert \mathcal{N}_i \rvert, 
+        \laplacian_{ij} = \begin{cases} -1 & \text{if } j\in\mathcal{N}_i\\
+                    0 & \text{elsewhere.}
+            \end{cases}
+        \end{aligned}
+        \]
+    \end{exampleblock}
+\end{frame}

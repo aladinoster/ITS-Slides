@@ -1,0 +1,46 @@
+\begin{frame}
+\frametitle{Vehicle merging - summary}
+\metroset{block=fill}
+    \uncover<1->{
+    \begin{block}{Finding intersections with congestion wave}
+    Let \(g^\ell_k = \begin{pmatrix}x^\ell_k & t^\ell_k\end{pmatrix}^T\) if \(p(g^\ell_k)\): projection to the shockwave \(w\)
+      \begin{equation*}
+        \begin{pmatrix}
+          p_x(g^\ell_k)\\
+          p_t(g^\ell_k)
+        \end{pmatrix} = 
+        \frac{1}{u+w}
+        \begin{bmatrix}
+           1 & u\\
+           -1 & w 
+        \end{bmatrix}
+        \left(
+        \begin{pmatrix}
+          X_m\\
+          x_\ell^{k}
+        \end{pmatrix} + 
+        \begin{bmatrix}
+          w & 0\\
+          0 & -u
+        \end{bmatrix}
+        \begin{pmatrix}
+          T^0_m\\
+          t^{\ell}_k
+        \end{pmatrix}
+        \right)
+      \end{equation*}
+    \end{block}}
+    \uncover<2->{
+    \begin{block}{CAV}
+      The \emph{a-priori} order is obtained by organizing the full set of projections \(\mathcal{P} = \{p(g^{\ell^+}_{1}), \dots, p(g^{\ell^+}_{n+m})\}\)
+    \end{block}
+    }
+    \uncover<3->{
+    \begin{block}{Mixed case}
+      The problem in this case can be as a \structure{resource allocation} problem. Vehicles can be allocated between two internal boundary conditions \(j_k, j_{k+1}\) as: 
+      \begin{equation*}
+        \eta \leq \floor*{\left(\Delta\tau^f_{{j_k},{j_{k+1}}}-2\tau\right) / \tau_p}+1
+      \end{equation*}
+    \end{block}
+    }
+  \end{frame}

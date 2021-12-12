@@ -1,0 +1,31 @@
+
+\begin{frame}
+  \frametitle{Results}
+  Yielding $T_y$ and anticipation time $T_a$ in seconds
+  \begin{table}[bth]
+    \begin{threeparttable}
+      \begin{tabularx}{\textwidth}{@{}l*{7}{c}@{}}
+        \toprule
+        &
+        \multicolumn{3}{c}{\bfseries Full CAV} &
+        \multicolumn{3}{c}{\bfseries Mixed scenario}\\ % note use of "c@{}"
+        \cmidrule(lr){2-4} \cmidrule(lr){5-7}  % left- and right-trimming
+        Vehicle index \(i_k\) & 
+        \multicolumn{1}{L}{\( T_y\)} & 
+        \multicolumn{1}{L}{\( T_a\)} & 
+        \multicolumn{1}{L}{\(\scriptscriptstyle \scrpt{T}{f}{\sigma_x} - \scrpt{T}{0}{\sigma_x}\)} & 
+        \multicolumn{1}{L}{\( T_y\)} & 
+        \multicolumn{1}{L}{\( T_a\)} & 
+        \multicolumn{1}{L}{\(\scriptscriptstyle \scrpt{T}{f}{\sigma_x} - \scrpt{T}{0}{\sigma_x}\)}\\  % note use of "L@{}"
+        \midrule
+        $i_3$ & 37.1 & 9.16 & 1.0 & 37.3 & 8.83 & 0.91\\
+        $i_5$ & 39.6 & 9.18 & 0.0 & 36.4 & 13.77 & 1.18 \\
+        $j_1$ (merging) & 34.4 & 8.60 & 0.86 & N/A & N/A & N/A\\
+        $i_7$ & 37.9 & 13.33 & 1.0 & N/A & N/A & N/A\\
+        $j_2$ (merging) & 38.0 & 11.99 & 0.81 & N/A & N/A & N/A\\
+        \bottomrule
+      \end{tabularx}
+      \caption{Vehicle index to be relaxed - Anticipation times}
+    \end{threeparttable}
+  \end{table}
+\end{frame}

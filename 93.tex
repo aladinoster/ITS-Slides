@@ -1,0 +1,42 @@
+\begin{frame}
+    \frametitle{Control of vehicle distance in vehicles (ADAS)}
+    \tikzstyle{block} = [draw, fill=blue!20, rectangle, minimum height=3em, minimum width=6em]
+    \tikzstyle{system} = [draw, fill=red!20, rectangle, minimum height=3em, minimum width=6em]
+    \tikzstyle{interface} = [draw, fill=green!20, rectangle, minimum height=3em, minimum width=6em]
+    \tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=1cm]
+    \tikzstyle{input} = [coordinate]
+    \tikzstyle{output} = [coordinate]
+    \tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+    \begin{center}
+    \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+      \node [block] (controller) {Controller};
+      \node [interface, right of=controller,node distance=2.5cm] (actuator) {Throttle};
+      \node [system, right of=actuator, pin={[pinstyle]above:Disturbances}, node distance=4cm] (system) {Vehicle};
+      \draw [->] (controller) -- node[name=u] {$u$} (actuator);
+      \draw [->] (actuator) -- node[name=u] {$u_a$} (system);
+      \node [output, right of=system, node distance = 2.5cm] (output) {};
+      \node [interface, below of=u] (measurements) {Sensors};
+      \draw [->] (system) -- node [name=y] {$y = s$}(output);
+      \draw [->] (y) |- (measurements);
+      \draw [->] (measurements) -| node[pos=0.99] {}
+    node [near end] {$y_m$} (controller);
+    \end{tikzpicture}
+    \end{center}
+    \begin{columns}
+    \begin{column}{0.5\textwidth}
+    \begin{itemize}
+      \item $u$ - Required acceleration
+      \item $u_a$ - Gas pedal 
+      \item $y$ - Inter vehicle distance
+    \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{exampleblock}{Objective}
+      \begin{itemize}
+        \item Regulate the headway space between two vehicles.
+        \item Adapt to dynamic condition of the leader.
+    \end{itemize}
+      \end{exampleblock}
+    \end{column}
+    \end{columns}
+\end{frame}

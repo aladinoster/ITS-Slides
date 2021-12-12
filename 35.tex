@@ -1,0 +1,21 @@
+
+\begin{frame}[shrink=9]{Control problem formulation}
+    The traffic signal control problem then consists in finding a solution to the following optimization problem:
+    \[
+    \begin{aligned}
+    \min_{\bar{u}} & \quad \sum_{k=1}^{K} \bigg( k_\text{bal}\bar{\rho}'(t+kT_s)\laplacian\bar{\rho}(t+kT_s) -
+            k_\text{ttd}\sum_{i\in\roads} f_i(t+kT_s) \bigg)
+            + \Vert\bar{u}-\bar{u}(t-T)\Vert_2^2 \\
+    & \text{subj. to: } \forall\, i,\, \forall\,t\quad  0\leq\bar{u}_i(t)\leq1\\
+                   &\phantom{ \text{subj. to: } \forall\, i,\, \forall\,t\quad} \sum_{j\in\neighUp_i}\bar{u}_j(t)\leq 1.
+    \end{aligned}
+    \]
+    \metroset{block=fill}
+    \begin{block}{Control problem characteristics}
+        \begin{itemize}
+        \item Minimize density balancing
+        \item Maximize total travel distance
+        \item A convex formulation is achievable when $K=1$
+        \end{itemize}
+    \end{block}
+\end{frame}

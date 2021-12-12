@@ -1,0 +1,20 @@
+\begin{frame}<handout:1|beamer:0>
+\frametitle{Convexity of the formulation --- ideas}
+    \begin{itemize}
+    
+    \item Problem formulation (equivalent):
+    \[
+    \begin{aligned}
+    & \min_{\bar{u}}\quad \bar{u}' Q \bar{u} + p' \bar{u} - k_{\text{ttd}}\mathbf{1}'f(\bar{u}) \\
+    & \text{subj. to, }\forall i:\, l_i\leq\bar{u}_i\leq 1 \\
+    & \phantom{\text{subj. to, }\forall i:\,} \sum_{j\in\neighUp_i}\bar{u}_j \leq 1
+    \end{aligned}
+    \]
+    
+    \item The total travel distance can be expressed as a function of $\bar{u}(t)$:
+    \begin{multline*}
+    f_i(\bar{u}) = \min\Bigg( v_i \bigg( \bar{\rho}_i(t) + \frac{T_s}{L_i}\Big(\sum_{j\in\neighUp_i} \bar{u}_j\beta_{ji} f^\text{out}_j(t) - \bar{u}_i f^\text{out}_i(t) \Big) \bigg), \\
+    w_i \bigg( \rho^\text{max}_i - \bar{\rho}_i(t) - \frac{T_s}{L_i}\Big(\sum_{j\in\neighUp_i} \bar{u}_j\beta_{ji} f^\text{out}_j(t) + \bar{u}_i f^\text{out}_i(t) \Big) \bigg) \Bigg).
+    \end{multline*}
+    \end{itemize}
+\end{frame}

@@ -1,0 +1,33 @@
+
+\begin{frame}<handout:1|beamer:0>
+\frametitle{Convexity of the formulation --- ideas}
+    \newcommand*\colF{} 
+    \only<2>{\renewcommand*\colF{\textcolor{red}}}
+    \newcommand*\colQ{} 
+    \only<3>{\renewcommand*\colQ{\textcolor{orange}}}
+    \newcommand*\colp{} 
+    \only<4>{\renewcommand*\colp{\textcolor{blue}}}        
+    \begin{itemize}
+    \item One step ahead density:
+    \begin{equation}
+    \bar{\rho}_i(t+T_s) = \bar{\rho}_i(t) + \frac{T_s}{L_i}\bigg(\colF{\sum_{j\in\neighUp_i} \beta_{ji} f^\text{out}_j(t)}\bar{u}_j - \bar{u}_i \colF{f^\text{out}_i(t)}\bigg)
+    \end{equation}
+    
+    \begin{equation}
+    \bar{\rho}(t+T_s) = \colF{H(t)} \bar{u} + c(t)
+    \end{equation}
+    
+    \item Bal + regularization:
+    \begin{equation}
+    \bar{u}^T \colQ{Q} \bar{u} + \colp{p^T} \bar{u}
+    \end{equation}
+    where
+    %
+    \begin{equation}
+    \colQ{Q = k_\text{bal}H'(t)\laplacian H(t) + I,}
+    \end{equation}
+    \begin{equation}
+    \colp{p = \big( 2 k_\text{bal}c^T(t)\laplacian H(t) - \bar{u}'(t-T) \big)^T.}
+    \end{equation}
+    \end{itemize}
+\end{frame}

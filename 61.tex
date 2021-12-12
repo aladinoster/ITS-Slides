@@ -1,0 +1,41 @@
+\begin{frame}
+    \frametitle{Important aspects in maneuver executions}
+    \metroset{block=fill}
+      This maneuver can be executed in multiple ways, 
+      \begin{itemize}
+        \item \only<1|handout:0>{\footnotesize\structure{\cite{Ntousakis2016:TR-C,Rios-Torres2017a:TITS}}} Designed focused on trajectory planning problem. 
+        \item \structure{Mixed traffic}. It is a key important factor for the controllability of the system. 
+      \end{itemize}
+      \begin{columns}
+        \column{0.3\textwidth}
+        \uncover<1->{
+          \textbf{Inputs}
+          \begin{itemize}
+            \item[\(T_m\)] merging time
+            \item[\(X_m\)] merging position
+            \item[\(u\)] merging speed 
+          \end{itemize}
+          }
+        \column{0.4\textwidth}
+        \uncover<2->{
+          \textbf{Parameters}
+          \begin{itemize}
+            \item[\(\varepsilon\)] maximum speed drop
+            \item[\(a^{-/+}\)] maximum acceleration.
+          \end{itemize}
+          }
+        \column{0.35\textwidth}
+        \uncover<3->{
+          \textbf{Decision variables}
+          \begin{itemize}
+            \item[\(i\)] Truck index
+            \item[\(T_a\)] anticipation time
+          \end{itemize}
+          }       
+      \end{columns}
+      \uncover<4->{
+      \begin{block}{Mixed traffic assumption}
+        Regarding the mixed traffic \(w = \underbrace{\delta_p/ \tau_p}_{\text{\tiny CAV}} = \underbrace{\delta/ \tau}_{\text{\tiny HDV}}\)
+      \end{block}
+      }
+\end{frame}

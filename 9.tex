@@ -1,0 +1,44 @@
+\begin{frame}
+    \frametitle{Basic concepts of control}
+    \tikzstyle{block} = [draw, fill=blue!20, rectangle, minimum height=3em, minimum width=6em]
+    \tikzstyle{system} = [draw, fill=red!20, rectangle, minimum height=3em, minimum width=6em]
+    \tikzstyle{interface} = [draw, fill=green!20, rectangle, minimum height=3em, minimum width=6em]
+    \tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=1cm]
+    \tikzstyle{input} = [coordinate]
+    \tikzstyle{output} = [coordinate]
+    \tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+    \begin{center}
+    \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+      \uncover<3->{\node [block] (controller) {Controller};}
+      \uncover<5->{\node [interface, right of=controller,node distance=3cm] (actuator) {Actuator};}
+      \uncover<1->{\node [system, right of=actuator, pin={[pinstyle]above:Disturbances}, node distance=3cm] (system) {System};}
+      \uncover<6->{\draw [->] (controller) -- node[name=u] {$u$} (actuator);}
+      \uncover<6->{\draw [->] (actuator) -- node[name=u] {$u_a$} (system);}
+      \uncover<3->{\node [output, right of=system] (output) {};}
+      \uncover<2->{\node [interface, below of=u] (measurements) {Sensor};}
+      \uncover<2->{\draw [->] (system) -- node [name=y] {$y$}(output);}
+      \uncover<2->{\draw [->] (y) |- (measurements);}
+      \uncover<4->{\draw [->] (measurements) -| node[pos=0.99] {}
+    node [near end] {$y_m$} (controller);}
+    \end{tikzpicture}
+    \end{center}
+    \begin{columns}
+    \uncover<3->{\begin{column}{0.4\textwidth}
+    \begin{itemize}
+      %\item $r$ - Reference to be tracked
+      %\item $e$ - Error
+      \item $u$ - Control input
+      \item $u_a$ - Actuation input
+      \item $y$ - Output system
+    \end{itemize}
+    \end{column}
+    \begin{column}{0.6\textwidth}
+      \begin{exampleblock}{Objective}
+      \begin{itemize}
+        \item Track a particular value in the output of the system.
+        \item Regularize a value in the output (Stabilize).
+    \end{itemize}
+      \end{exampleblock}
+    \end{column}}
+    \end{columns}
+    \end{frame}

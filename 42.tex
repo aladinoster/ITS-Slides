@@ -1,0 +1,23 @@
+\begin{frame}<handout:1|beamer:0>
+    \frametitle{Distributed algorithm}
+    Partial (separable) Lagrangian:
+    \[
+    %\begin{gathered}
+    L =\sum_{i\in\roads} L_i =  \sum_{i\in\roads} g_i \big(\bar{u}_{[p\in\mathcal{S}_i]}  \big) +
+    %
+    \bar{u}_i^{(i)} \sum_{p\in\mathcal{S}_i\setminus i} \big( \lambda_i^{(i,p)} - \lambda_i^{(p,i)} \big) +
+    \sum_{p\in\mathcal{S}_i\setminus i} \bar{u}_p^{(i)} \big( \lambda_p^{(i,p)} - \lambda_p^{(p,i)} \big).
+    %
+    %\end{gathered}
+    \]
+    \begin{itemize}
+    \item[]\textbf{Initialization.} Set $k=0$. Create local variables for each subproblem %$\bar{u}_p$, $\lambda^{(i,p)}_p$, for every $p\in\mathcal{S}_i$
+    %
+    \item[]\textbf{Primal update.} Update primal variables $\bar{u}_p(k+1)$ by minimizing the $i$-th term of the partial Lagrangian
+    %
+    \item[]\textbf{Transmission.} Send primal local variables to requiring neighbors $p\in\mathcal{S}_i$, and collect the most recent values of $\bar{u}_i^{(p)}$, $\bar{u}_p^{(p)}$ from them
+    \item[]\textbf{Dual update.} Update the Lagrangian multipliers with a gradient update of step $\alpha$
+    %
+    \item[]\textbf{Stop condition.} If the solution has numerically stabilized then stop, otherwise increment $k$ and go to 1
+    \end{itemize}
+\end{frame}

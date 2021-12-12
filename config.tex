@@ -1,0 +1,108 @@
+
+% Packages
+
+% \usepackage{appendixnumberbeamer}
+% \usepackage{caption}
+\usepackage{subcaption}                       % Subfigures
+\usepackage{eurosym}                          % Euro symbol
+\usepackage{booktabs}                         % Booktabs
+\usepackage{threeparttable}                   % Tables in parts
+\usepackage{tabularx}                         % Special tables
+% \usepackage[scale=2]{ccicons}
+% \usepackage{verbatim}
+% \usepackage{pgfplots, pgfplotstable}
+% \usetikzlibrary{calc}
+% \usepgfplotslibrary{dateplot}
+\usepackage{xspace}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% \usepackage{stmaryrd}
+\usepackage{mathtools}
+\usepackage{bbold}
+% \usepackage{siunitx}
+% \usepackage{bbm}
+% \usepackage{booktabs}
+\usepackage{xcolor}
+% \usepackage{fontspec}
+% \usepackage{enumitem}                       % Labels in items
+% \usepackage{luatexbase}                     % Fix problems of microtype
+% \usepackage{microtype}
+% \usepackage{pgfpages}                       % Comments notes right hand
+\usepackage{hyperref}                         % Mark pdf
+% \usepackage{url}                            % To cite url \howpublished in BibTeX
+% \usepackage{graphics}
+\usepackage{tikz}
+\usepackage{wasysym}                          % Smileys
+\usepackage{smartdiagram}                     % Smart diagrams like on word
+\usepackage{standalone}                       % Include standlone figures
+\usepackage{media9}                           % videos
+% \usepackage{img/kbordermatrix}              % Label rows/columns matrix
+% \usepackage{courier}                        % Required font for listings
+% \usepackage{matlab-prettifier}              % Listings for code (Matlab)
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+
+% Image path + breaks
+\graphicspath{{./img/}}                     % Images Folders
+% \allowdisplaybreaks                         % Breaks formulas
+
+% Custom commands for math
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+% Custom commmands for tabularx
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+% \theoremstyle{plain}
+% \newtheorem{proposition}{Proposition}
+
+\newcommand{\mySet}[1]{\mathcal{#1}}
+\newcommand{\roads}{\mySet{R}}
+\newcommand{\roadsin}{\mySet{R}^\text{in}}
+\newcommand{\roadsout}{\mySet{R}^\text{out}}
+\newcommand{\intersection}{\mySet{I}}
+\newcommand{\neighUp}{\mathcal{N}^-}
+\newcommand{\neighDown}{\mathcal{N}^+}
+\newcommand{\laplacian}{\mathcal{L}}
+\newcommand{\Malpha}{\overline{u}}
+
+\newtheorem{asm}{Assumption}
+\newtheorem{dfn}{Definition}
+\newtheorem{prp}{Proposition}
+\newcommand{\arrivallane}{\ell+}
+\newcommand{\departurelane}{\ell-}
+\newcommand{\lane}{\ell}
+\newcommand{\scrpt}[3]{{#1}^{#2}_{#3}}    
+\newcommand{\tim}[2]{t^{#1}_{#2}}        
+\newcommand{\pos}[2]{x^{#1}_{#2}} 
+\newcommand{\pnt}[2]{g^{#1}_{#2}}     
+% \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+% Colorsetting
+\definecolor{calpolypomonagreen}{rgb}{0.12, 0.3, 0.17}
+
+% \newcommand{\tr}[1]{\color{red}{#1}}
+% \newcommand{\tg}[1]{\color{green}{#1}}
+% \newcommand{\tb}[1]{\color{blue}{#1}}
+
+% PDF marks
+\hypersetup{
+  pdfauthor={Andres Ladino},
+  pdftitle={Control in Traffic Networks},
+  pdfsubject={ITS Course},
+  urlcolor=blue,
+}
+
+% Bibliography setups
+% \AtBeginBibliography{\footnotesize}
+% \AtBeginNote{%
+%     \let\enumerate\itemize%
+%     \let\endenumerate\enditemize%
+% }

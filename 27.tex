@@ -1,0 +1,20 @@
+\begin{frame}
+    \frametitle{S-CTM --- Microscopic validation}
+    \metroset{block=fill}
+    \begin{block}{Validation objective}
+    How close is the signalized CTM to a realistic behavior (e.g., microscopic models)?
+    \end{block}
+    \begin{center}
+    \begin{tikzpicture}
+    \node[draw=blue, align=center] (input) at (0,0) {Input \\ \& \\ initial condition};
+    \node (aimsun) at (4,2) {\includegraphics[scale=0.3]{fig_57_aimsun}};
+    \node[draw=black] (sctm) at (4,-2) {S-CTM};
+    \node (micro) at (8,2) {$\rho^\text{micro}$};
+    \node (macro) at (8,-2) {$\rho^\text{macro}$};
+    \draw[->] (input)|-(aimsun);
+    \draw[->] (input)|-(sctm);
+    \draw[->] (aimsun)--(micro);
+    \draw[->] (sctm)--(macro);
+    \end{tikzpicture}
+    \end{center}
+\end{frame}

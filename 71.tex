@@ -1,0 +1,27 @@
+
+\begin{frame}
+    \frametitle{Operational layer}
+    \uncover<1->{
+    \begin{block}{Model Predictive Control}
+      \begin{itemize}
+        \item Integration of optimality \structure{safety}, \structure{comfort} + model constraints. 
+        \item Predictive feauture for CAVs until the merging position.
+      \end{itemize}
+    \end{block}
+    }
+    \uncover<2->{
+    \begin{block}{Vehicle's dynamics}
+      \begin{equation*}
+      \dot{\mathbf{x}}(t) = \frac{d}{dt}\begin{pmatrix}\mathbf{e}_s & \mathbf{e}_v\end{pmatrix} \rightarrow \text{LTI system} + \mathbf{a} \in\ [a^-,a^+]
+      \end{equation*}
+    \end{block}
+    }
+    \uncover<3->{
+    \begin{block}{Cost function}
+      \begin{equation*}
+        \mathcal{L}(\mathbf{e}_s,\mathbf{e}_v,\mathbf{a}) = \sum^n_{k=1}\underbrace{c_1\left(s_k-s^r_k\right)^2}_{\text{\tiny Safety}} \onslide<2->{+ \underbrace{c_2\left(v_{k-1}-v_k\right)^2}_{\text{\tiny \color{blue}Homogeneity}}+} \onslide<3>{\underbrace{c_3a^2_k}_{\text{\tiny \color{red} Comfort}}}
+      \end{equation*}
+      \textbf{Note}: For this case the control can eventually be distributed.
+    \end{block}
+    }
+  \end{frame}

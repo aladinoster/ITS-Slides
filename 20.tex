@@ -1,0 +1,47 @@
+\begin{frame}
+    \frametitle{The signalized cell transmission model (S-CTM)}
+    \newcommand*\ptcolx{}
+    \newcommand*\ptcoly{}
+    \only<3->{\renewcommand*\ptcolx{\textcolor{blue}}}
+    \only<4>{\renewcommand*\ptcoly{\textcolor{red}}}
+    \uncover<1->{
+    \[
+    \rho_i(t+T_s) = \rho_i(t) + \frac{T_s}{L_i}\Big(\ptcolx{f^\text{in}_i(t)} - u_i(t) \ptcoly{f^\text{out}_i(t)}\Big)
+    \]
+    
+    $D_i(t), S_i(t)$: demand (supply) of cell $i$\\[1em]
+    }
+    \begin{tikzpicture}
+    \uncover<2->{
+        \node (sum) at (0,0) {$f^\text{in}$ weighted sum of $f^\text{out}$};
+    }
+    \uncover<3->{
+    \node (fifo) at (0,-1.5) {$f^\text{out}$ with FIFO policy};
+    }
+    \uncover<3->{
+    \node (fout) at (5,-1.5) {$\ptcoly{f^\text{out}_i(t)} = \min\bigg( D_i(t), \bigg\{ \frac{S_j(t)}{\beta_{ij}}\bigg\}_{j\in\neighDown_i} \bigg)$};
+    }
+    \uncover<2->{
+    \node (fin) at (5,0) {$\ptcolx{f^\text{in}_i(t)} = \sum_{j\in\neighUp_i} \beta_{ji}f^\text{out}_j(t)u_j(t)$};
+    }
+    \uncover<2->{
+    \draw[->] (sum)--(fin);
+    }
+    \uncover<3->{
+    \draw[->] (fifo)--(fout);
+    }
+    \uncover<4->{
+    \node[draw] (box) at (5,-4) {%
+    $
+    \begin{aligned}
+    f^\text{out}_i(t) &= \max \phi\\
+    \text{subj. to:   } & \phi\leq D_i(t)\\
+        & \beta_{ij}\phi\leq S_j(t)\,\forall j\in\neighDown_i
+    \end{aligned}
+    $
+    };
+    
+    \draw[->] (box)--(fout);
+    }
+    \end{tikzpicture}
+\end{frame}
